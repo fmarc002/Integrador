@@ -119,7 +119,7 @@ namespace Integrador
 
             //calcular el primer tiempo del exam y compararlo a los 10seg con el nuevo tiempo, si es menor al segundo tiempo pasa
             TimeOnly firstActualDataTime = testSelection.Time();
-            Assert.True(ExplicitWaitUntil(firstActualDataTime, TimeSpan.FromSeconds(10)));
+            Assert.True(WaitForElapsedTime(firstActualDataTime, TimeSpan.FromSeconds(10)));
 
             //SECCIÓN 1
             String seccion_1 = "Sección I";
@@ -279,7 +279,7 @@ namespace Integrador
 
             //calcular el primer tiempo del exam y compararlo a los 10seg con el nuevo tiempo, si es menor al segundo tiempo pasa
             TimeOnly firstActualDataTime = testSelection.Time();
-           Assert.True(ExplicitWaitUntil(firstActualDataTime,TimeSpan.FromSeconds(10)));
+           Assert.True(WaitForElapsedTime(firstActualDataTime,TimeSpan.FromSeconds(10)));
         }
 
         }

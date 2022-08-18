@@ -40,7 +40,7 @@ namespace Integrador
             this.Driver.Manage().Timeouts().ImplicitWait = defaultTimeOut;
         }
 
-        public bool ExplicitWaitUntil(TimeOnly time1,TimeSpan timeout)
+        public bool WaitForElapsedTime(TimeOnly time1,TimeSpan timeout)
         {
 
             return this.Driver.ExplicitWaitUntil(() => {

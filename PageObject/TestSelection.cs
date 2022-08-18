@@ -17,6 +17,8 @@ namespace Integrador
         //public Label lblDataTime => this.Container.NewControl<Label>(By.XPath(".//*[contains(@class,'data-timer')]/p[contains(text(),'Tiempo')]"));
         public Label lblDataTime => this.Container.NewControl<Label>(By.CssSelector(".data-timer .ng-binding"));
 
+        string pregTecnicas = ".//div[contains(@class,'preguntas-tecnicas')]";
+
         //SECCIONES
         //validar seccion 4
         public Label lblSeccion_4 => this.Container.NewControl<Label>(By.XPath(".//*[contains(text(),'Sección IV')]"));
@@ -36,7 +38,7 @@ namespace Integrador
         public Label lbl_question_1 => this.Container.NewControl<Label>(By.XPath(".//div[contains(@class,'preguntas-tecnicas')][1]/p"));
 
         //validar pregunta 5 seccion 1 y 2
-        public Label lbl_question_5 => this.Container.NewControl<Label>(By.XPath(".//div[contains(@class,'preguntas-tecnicas')][5]/p"));
+        public Label lbl_question_5 => this.Container.NewControl<Label>(By.XPath($"{pregTecnicas}[5]/p"));
 
 
         //RESPUESTAS
